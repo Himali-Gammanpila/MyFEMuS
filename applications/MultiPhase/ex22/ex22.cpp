@@ -63,13 +63,14 @@ void AssembleError2(Data *data, const std::vector <double> &phiV, const std::vec
 //circle; spuriopus current test 1. It worked with all FEM types and different densities
 // std::vector <double> A = {1., 0, 1., 0, 0, -1.};
 // bool analyticSolutioIsAvailable = true;
+// //bool analyticSolutioIsAvailable = false;
 // FEOrder Vorder = SECOND;
 // FEOrder Porder = SECOND;
 // const double mu1 = 1.;
-// const double mu2 = .01; // 1., 0.1, 0.01
-// const double rho1 = 100.; // 1.,10.,100. while rho2 = 1
+// const double mu2 = 1.; // 1., 0.1, 0.01
+// const double rho1 = 1.; // 1.,10.,100. while rho2 = 1
 // const double rho2 = 1.; // 1.,10.,100. while rho1 = 1
-// const double sigma = 1;
+// const double sigma = 1.;
 // const double gravity = -0.;
 // const double dt = 0.1;
 // std::vector <double> g = {0, 0, 0};
@@ -77,21 +78,21 @@ void AssembleError2(Data *data, const std::vector <double> &phiV, const std::vec
 // double gammaP = 0.01; // You may need to change it between 0.1 and 0.01
 
 
-//ellipse
+// ellipse
 std::vector <double> A = {1.2, 0, .8, 0, 0, -1.};
 bool analyticSolutioIsAvailable = false;
 FEOrder Vorder = SECOND;
 FEOrder Porder = SECOND;
 const double mu1 = 1.;
-const double mu2 = 1; // I was not capable to change the values of mu1, mu2 here
+const double mu2 = 1.; // I was not capable to change the values of mu1, mu2 here
 const double rho1 = 1.; // 1.,10. while rho2 = 1
-const double rho2 = 1.; // 1.,10.,100. while rho1 = 1
+const double rho2 = 10.; // 1.,10.,100. while rho1 = 1
 const double sigma = 1;
 const double gravity = -0.;
 const double dt = 0.1;
 std::vector <double> g = {0, 0, 0};
 double gammaV = 0.0001; // keep this like this
-double gammaP = 10.; // You may need to change it to 1
+double gammaP = 1.; // You may need to change it to 1
 
 #include "./include/AllPenalty.hpp"
 
